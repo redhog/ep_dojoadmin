@@ -1,0 +1,15 @@
+{
+  "parts": [
+    { "name": "admin", "pre": ["ep_express/pages"],
+      "client_hooks": {
+        "documentReadyAdmin": "ep_dojoadmin/static/js/hooks/admin:documentReadyAdmin" },
+      "urlmap": {
+        "/admin": "ep_dojoadmin/templates/admin/page.html"
+      }
+    },
+    { "name": "pluginadmin",
+      "client_hooks": {
+        "admin": "ep_dojoadmin/static/js/hooks/pluginadmin:admin" }
+    }
+  ]
+}
